@@ -1,0 +1,77 @@
+2022-08-17 00:50:34.607 ERROR --- [main][] [org.springframework.boot.SpringApplication] [824] : Application run failed
+java.lang.IllegalStateException: java.lang.IllegalStateException: Could not initialize Log4J2 logging from classpath:log4j.properties
+	at org.springframework.boot.context.logging.LoggingApplicationListener.initializeSystem(LoggingApplicationListener.java:328) ~[spring-boot-2.7.2.jar:2.7.2]
+	at org.springframework.boot.context.logging.LoggingApplicationListener.initialize(LoggingApplicationListener.java:282) ~[spring-boot-2.7.2.jar:2.7.2]
+	at org.springframework.boot.context.logging.LoggingApplicationListener.onApplicationEnvironmentPreparedEvent(LoggingApplicationListener.java:240) ~[spring-boot-2.7.2.jar:2.7.2]
+	at org.springframework.boot.context.logging.LoggingApplicationListener.onApplicationEvent(LoggingApplicationListener.java:216) ~[spring-boot-2.7.2.jar:2.7.2]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:176) ~[spring-context-5.3.22.jar:5.3.22]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:169) ~[spring-context-5.3.22.jar:5.3.22]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:143) ~[spring-context-5.3.22.jar:5.3.22]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:131) ~[spring-context-5.3.22.jar:5.3.22]
+	at org.springframework.boot.context.event.EventPublishingRunListener.environmentPrepared(EventPublishingRunListener.java:85) ~[spring-boot-2.7.2.jar:2.7.2]
+	at org.springframework.boot.SpringApplicationRunListeners.lambda$environmentPrepared$2(SpringApplicationRunListeners.java:66) ~[spring-boot-2.7.2.jar:2.7.2]
+	at java.util.ArrayList.forEach(ArrayList.java:1257) ~[?:1.8.0_231]
+	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:120) ~[spring-boot-2.7.2.jar:2.7.2]
+	at org.springframework.boot.SpringApplicationRunListeners.doWithListeners(SpringApplicationRunListeners.java:114) ~[spring-boot-2.7.2.jar:2.7.2]
+	at org.springframework.boot.SpringApplicationRunListeners.environmentPrepared(SpringApplicationRunListeners.java:65) ~[spring-boot-2.7.2.jar:2.7.2]
+	at org.springframework.boot.SpringApplication.prepareEnvironment(SpringApplication.java:344) ~[spring-boot-2.7.2.jar:2.7.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:302) ~[spring-boot-2.7.2.jar:2.7.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306) ~[spring-boot-2.7.2.jar:2.7.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295) ~[spring-boot-2.7.2.jar:2.7.2]
+	at com.sdt.springboottest.SpringboottestApplication.main(SpringboottestApplication.java:12) ~[main/:?]
+Caused by: java.lang.IllegalStateException: Could not initialize Log4J2 logging from classpath:log4j.properties
+	at org.springframework.boot.logging.log4j2.Log4J2LoggingSystem.loadConfiguration(Log4J2LoggingSystem.java:230) ~[spring-boot-2.7.2.jar:2.7.2]
+	at org.springframework.boot.logging.log4j2.Log4J2LoggingSystem.loadConfiguration(Log4J2LoggingSystem.java:193) ~[spring-boot-2.7.2.jar:2.7.2]
+	at org.springframework.boot.logging.AbstractLoggingSystem.initializeWithSpecificConfig(AbstractLoggingSystem.java:66) ~[spring-boot-2.7.2.jar:2.7.2]
+	at org.springframework.boot.logging.AbstractLoggingSystem.initialize(AbstractLoggingSystem.java:57) ~[spring-boot-2.7.2.jar:2.7.2]
+	at org.springframework.boot.logging.log4j2.Log4J2LoggingSystem.initialize(Log4J2LoggingSystem.java:169) ~[spring-boot-2.7.2.jar:2.7.2]
+	at org.springframework.boot.context.logging.LoggingApplicationListener.initializeSystem(LoggingApplicationListener.java:316) ~[spring-boot-2.7.2.jar:2.7.2]
+	... 18 more
+Caused by: java.io.FileNotFoundException: class path resource [log4j.properties] cannot be resolved to URL because it does not exist
+	at org.springframework.util.ResourceUtils.getURL(ResourceUtils.java:137) ~[spring-core-5.3.22.jar:5.3.22]
+	at org.springframework.boot.logging.log4j2.Log4J2LoggingSystem.load(Log4J2LoggingSystem.java:235) ~[spring-boot-2.7.2.jar:2.7.2]
+	at org.springframework.boot.logging.log4j2.Log4J2LoggingSystem.loadConfiguration(Log4J2LoggingSystem.java:221) ~[spring-boot-2.7.2.jar:2.7.2]
+	at org.springframework.boot.logging.log4j2.Log4J2LoggingSystem.loadConfiguration(Log4J2LoggingSystem.java:193) ~[spring-boot-2.7.2.jar:2.7.2]
+	at org.springframework.boot.logging.AbstractLoggingSystem.initializeWithSpecificConfig(AbstractLoggingSystem.java:66) ~[spring-boot-2.7.2.jar:2.7.2]
+	at org.springframework.boot.logging.AbstractLoggingSystem.initialize(AbstractLoggingSystem.java:57) ~[spring-boot-2.7.2.jar:2.7.2]
+	at org.springframework.boot.logging.log4j2.Log4J2LoggingSystem.initialize(Log4J2LoggingSystem.java:169) ~[spring-boot-2.7.2.jar:2.7.2]
+	at org.springframework.boot.context.logging.LoggingApplicationListener.initializeSystem(LoggingApplicationListener.java:316) ~[spring-boot-2.7.2.jar:2.7.2]
+	... 18 more
+2022-08-17 00:51:08.414 INFO  --- [main][] [org.springframework.boot.StartupInfoLogger] [55] : Starting SpringboottestApplication using Java 1.8.0_231 on LAPTOP-ODACQUP2 with PID 19556 (E:\workspace\99-test\02-springbootProject\springboottest\build\classes\java\main started by wss in E:\workspace\99-test\02-springbootProject\springboottest)
+2022-08-17 00:51:08.422 INFO  --- [main][] [org.springframework.boot.SpringApplication] [634] : No active profile set, falling back to 1 default profile: "default"
+2022-08-17 00:51:09.250 INFO  --- [main][] [springframework.data.repository.config.RepositoryConfigurationDelegate] [262] : Multiple Spring Data modules found, entering strict repository configuration mode
+2022-08-17 00:51:09.250 INFO  --- [main][] [springframework.data.repository.config.RepositoryConfigurationDelegate] [132] : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-08-17 00:51:09.344 INFO  --- [main][] [springframework.data.repository.config.RepositoryConfigurationDelegate] [201] : Finished Spring Data repository scanning in 83 ms. Found 1 JPA repository interfaces.
+2022-08-17 00:51:09.359 INFO  --- [main][] [springframework.data.repository.config.RepositoryConfigurationDelegate] [262] : Multiple Spring Data modules found, entering strict repository configuration mode
+2022-08-17 00:51:09.360 INFO  --- [main][] [springframework.data.repository.config.RepositoryConfigurationDelegate] [132] : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-08-17 00:51:09.373 INFO  --- [main][] [springframework.data.repository.config.RepositoryConfigurationExtensionSupport] [349] : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.sdt.springboottest.repository.BookRespository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2022-08-17 00:51:09.373 INFO  --- [main][] [springframework.data.repository.config.RepositoryConfigurationDelegate] [201] : Finished Spring Data repository scanning in 5 ms. Found 0 Redis repository interfaces.
+2022-08-17 00:51:09.883 INFO  --- [main][] [boot.web.embedded.tomcat.TomcatWebServer] [108] : Tomcat initialized with port(s): 8181 (http)
+2022-08-17 00:51:09.897 INFO  --- [main][] [org.apache.juli.logging.DirectJDKLog] [173] : Initializing ProtocolHandler ["http-nio-8181"]
+2022-08-17 00:51:09.897 INFO  --- [main][] [org.apache.juli.logging.DirectJDKLog] [173] : Starting service [Tomcat]
+2022-08-17 00:51:09.897 INFO  --- [main][] [org.apache.juli.logging.DirectJDKLog] [173] : Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-08-17 00:51:10.055 INFO  --- [main][] [org.apache.juli.logging.DirectJDKLog] [173] : Initializing Spring embedded WebApplicationContext
+2022-08-17 00:51:10.055 INFO  --- [main][] [boot.web.servlet.context.ServletWebServerApplicationContext] [292] : Root WebApplicationContext: initialization completed in 1594 ms
+2022-08-17 00:51:10.157 INFO  --- [main][] [com.zaxxer.hikari.HikariDataSource] [110] : HikariPool-1 - Starting...
+2022-08-17 00:51:10.749 INFO  --- [main][] [com.zaxxer.hikari.HikariDataSource] [123] : HikariPool-1 - Start completed.
+2022-08-17 00:51:10.788 INFO  --- [main][] [hibernate.jpa.internal.util.LogHelper] [31] : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-08-17 00:51:10.833 INFO  --- [main][] [org.hibernate.Version] [44] : HHH000412: Hibernate ORM core version 5.6.10.Final
+2022-08-17 00:51:10.966 INFO  --- [main][] [annotations.common.reflection.java.JavaReflectionManager] [56] : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-08-17 00:51:11.057 INFO  --- [main][] [org.hibernate.dialect.Dialect] [175] : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-08-17 00:51:11.509 INFO  --- [main][] [transaction.jta.platform.internal.JtaPlatformInitiator] [52] : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-08-17 00:51:11.519 INFO  --- [main][] [org.springframework.orm.jpa.AbstractEntityManagerFactoryBean] [437] : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-08-17 00:51:11.948 WARN  --- [main][] [boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration] [219] : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-08-17 00:51:12.060 INFO  --- [main][] [springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping] [69] : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2022-08-17 00:51:12.724 INFO  --- [main][] [org.apache.juli.logging.DirectJDKLog] [173] : Starting ProtocolHandler ["http-nio-8181"]
+2022-08-17 00:51:12.742 INFO  --- [main][] [boot.web.embedded.tomcat.TomcatWebServer] [220] : Tomcat started on port(s): 8181 (http) with context path ''
+2022-08-17 00:51:12.743 INFO  --- [main][] [documentation.spring.web.plugins.DocumentationPluginsBootstrapper] [160] : Context refreshed
+2022-08-17 00:51:12.756 INFO  --- [main][] [documentation.spring.web.plugins.DocumentationPluginsBootstrapper] [163] : Found 1 custom documentation plugin(s)
+2022-08-17 00:51:12.785 INFO  --- [main][] [documentation.spring.web.scanners.ApiListingReferenceScanner] [41] : Scanning for api listing references
+2022-08-17 00:51:12.918 INFO  --- [main][] [spring.web.readers.operation.CachingOperationNameGenerator] [40] : Generating unique operation named: indexUsingGET_1
+2022-08-17 00:51:12.921 INFO  --- [main][] [spring.web.readers.operation.CachingOperationNameGenerator] [40] : Generating unique operation named: indexUsingGET_2
+2022-08-17 00:51:12.923 INFO  --- [main][] [spring.web.readers.operation.CachingOperationNameGenerator] [40] : Generating unique operation named: indexUsingGET_3
+2022-08-17 00:51:12.924 INFO  --- [main][] [spring.web.readers.operation.CachingOperationNameGenerator] [40] : Generating unique operation named: indexUsingGET_4
+2022-08-17 00:51:12.927 INFO  --- [main][] [spring.web.readers.operation.CachingOperationNameGenerator] [40] : Generating unique operation named: indexUsingGET_5
+2022-08-17 00:51:12.928 INFO  --- [main][] [spring.web.readers.operation.CachingOperationNameGenerator] [40] : Generating unique operation named: indexUsingGET_6
+2022-08-17 00:51:12.929 INFO  --- [main][] [spring.web.readers.operation.CachingOperationNameGenerator] [40] : Generating unique operation named: indexUsingGET_7
+2022-08-17 00:51:13.036 INFO  --- [main][] [org.springframework.boot.StartupInfoLogger] [61] : Started SpringboottestApplication in 4.973 seconds (JVM running for 6.026)
